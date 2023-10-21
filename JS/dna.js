@@ -2,6 +2,9 @@ import * as THREE from 'https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/thr
 
 import { OBJLoader } from "https://cdn.skypack.dev/three@0.129.0/examples/jsm/loaders/OBJLoader.js";
 
+import { OrbitControls } from "https://cdn.skypack.dev/three@0.129.0/examples/jsm/controls/OrbitControls.js";
+
+
 let scene = null;
 let camera = null;
 let renderer = null;
@@ -45,6 +48,9 @@ resizeModel();
 // Adicione um ouvinte de redimensionamento para manter o tamanho correto
 window.addEventListener('resize', resizeModel);
 
+
+const controls = new OrbitControls(camera, renderer.domElement);
+controls.update();
 // Inicie a animação
 animate();
 y.style.display = 'none';
@@ -82,5 +88,6 @@ function resizeModel() {
 
 function animate() {
     requestAnimationFrame(animate);
+    controls.update(); // Adicione esta linha
     renderer.render(scene, camera);
 }
