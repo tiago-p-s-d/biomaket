@@ -1,11 +1,11 @@
 import * as THREE from 'https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.module.js';
 
-
+import { OBJLoader } from "https://cdn.skypack.dev/three@0.129.0/examples/jsm/loaders/OBJLoader.js";
 
 let scene = null;
 let camera = null;
 let renderer = null;
-let cube = null;
+
 let canvasContainer2 = null; // Mova a declaração para o escopo global
 let x = 0;
 
@@ -24,11 +24,19 @@ canvasContainer2.appendChild(renderer.domElement);
 
 
 
-// Crie um cubo
-const geometry2 = new THREE.BoxGeometry(0.5, 0.5, 0.5);
-const material2 = new THREE.MeshBasicMaterial({ color: 0x00ff33 });
-cube = new THREE.Mesh(geometry2, material2);
-scene.add(cube);
+const loader = new OBJLoader();
+
+var obj;
+loader.load('../models/Doguinho.obj', function (object){
+scene.add(object);
+obj = object;
+})
+
+const light = new THREE.HemisphereLight(0xffffff, 0x080820, 1);
+scene.add(light)
+camera.position.set(10,20,0);
+camera.lookAt(new THREE.Vector3(0, 10, 0));
+
 let y = document.querySelector('.content-box2');
 
 // Redimensione o modelo com base no tamanho do contêiner
@@ -46,13 +54,9 @@ y.style.display = 'none';
 
     if (x == 0) {
         showCanvas()
-
-        y.style.display = 'block';
         x++;
     } else {
         hideCanvas();
-
-        y.style.display = 'none';
         x = 0;
     }
 
@@ -60,13 +64,11 @@ y.style.display = 'none';
 
 
 function hideCanvas() {
-    const canvas = document.querySelector('canvas'); // Encontra a tag canvas
-    canvas.style.display = 'none'; // Define a propriedade display como 'none'
+    y.style.display = 'none';
 }
 
 function showCanvas() {
-    const canvas = document.querySelector('canvas'); // Encontra a tag canvas
-    canvas.style.display = 'block'; // Define a propriedade display de volta para 'block'
+    y.style.display = 'block';
 }
 
 function resizeModel() {
@@ -80,16 +82,5 @@ function resizeModel() {
 
 function animate() {
     requestAnimationFrame(animate);
-    cube.rotation.x += 0.01;
-    cube.rotation.y += 0.01;
     renderer.render(scene, camera);
 }
-
-
-
-
-
-// Chame a função para aplicar o tamanho de fonte inicial
-
-
-
