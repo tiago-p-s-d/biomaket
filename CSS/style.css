@@ -8,10 +8,7 @@
     word-spacing: 0.1em;
 }
 
-button{
-    width: 10vh;
-    height: 10vh;
-}
+
 
 
 body{
@@ -70,3 +67,17 @@ margin-top: 2em;
     display: flex;
     justify-content: center;
 }
+
+
+
+.ul-topic {
+
+    font-style: italic;
+    list-style-type: none; /* Remove os marcadores padrão da lista */
+  }
+  
+.li-topic::before {
+    
+    content: "• "; /* Define o conteúdo antes de cada item da lista (o marcador) */
+  }
+  
