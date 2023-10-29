@@ -28,125 +28,341 @@
 
 
 	<h1 class="texto">TEXTOS</h1>
-	<div class="flex-container cubo"><h5 style="font-size: 10vw;">BIOMAKET</h5>
+	<div class="flex-container cubo">
+		<h5 style="font-size: 10vw;">BIOMAKET</h5>
 		<img src="../IMG/biomaket.jpeg" alt="biomaket" style="width: 80%;">
-		<h1 >Trabalho realizado por: <br> Rickson, Clara, Luiz e Tiago</h1>
+		<h1>Trabalho realizado por: <br> Rickson, Clara, Luiz e Tiago</h1>
 	</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 	<div class="flex-container cubo">
 
-		<!--loucurinhas-->
-
-
-
-
-
-		<!--loucurinhas-->
-
-
-
-
-
 		<div class="container">
-			
-			<div class="card" style="width: 100%;">
-				<img src="../IMG/todo-tumor-e-cancer.jpg" class="card-img-top" alt="...">
-				<div class="card-body">
-					<h5 class="card-title" style="font-size: 5vw;">Como surge o câncer?</h5>
-					<p class="card-text" style="word-spacing: -1.3px;">O DNA é um enorme manual para o corpo humano e é
-						ele quem determina o
-						comportamento de cada célula e quanto à sua multiplicação. A inicialização de um
-						possível câncer ocorre quando o DNA sofre mutações e começa a passar informações
-						erradas para a célula. As mutações ou alterações são comumente recorrentes, pois os
-						30.000 genes que o DNA precisa codificar no corpo inteiro são passíveis de alterações.
-						Por isso, o organismo possui formas diferentes de segurança, para que essas células,
-						com informações erradas, não se reproduzam. </p>
+
+
+			<div class="botoes-model">
+
+				<!--estilizar isso aqui, os 3 botões vão ficar em uma div e a div vai ser melhor estilizada-->
+
+
+				<h2>para ver os modelos 3d, clique nos botões a seguir</h2>
+<div style="display: flex; justify-content: space-between;">
+				<button type="button" onclick="createScene()" class="gerar3d" id="botao">
+					<p>celula</p>
+				</button>
+				
+
+
+				<button type="button" onclick="createScene2()" class="gerar3d" class="botao">cromossomo</button>
+
+
+				<button type="button" onclick="createScene3()" class="gerar3d" class="botao">fita de dna</button>
 
 
 
-					<p class="d-inline-flex gap-1">
-						<button class="btn btn-primary" type="button" data-bs-toggle="collapse"
-							data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-							como o organismo se defende?
-						</button>
-					</p>
-					<div class="collapse" id="collapseExample">
-						<div class="card card-body">
-							<ul class="ul-topic">
-								<li class="li-topic">Cada célula possui moléculas que corrigem as mutações do DNA. Elas
-									conseguem perceber quais células possuem mutação e passam a corrigi-las.
-								</li>
-
-								<li class="li-topic">Na maioria das vezes as mutações são inofensivas para o nosso
-									organismo,
-									mas para evitar um acúmulo de mutações em regiões específicas as células se
-									autodestroem,
-									prevenindo que um possível câncer se desenvolva. Caso as células de autodestruição
-									sejam
-									desligadas devido à alterações, o sistema de autodestruição nunca é ativado e a
-									célula
-									defeituosa passa a ser imortal e a se multiplicar.
-								</li>
-
-								<li class="li-topic">É nesse último caso que o sistema imune é ativado. Ele é capaz de
-									eliminar as
-									células defeituosas que podem gerar um câncer. Pois quando uma célula se reproduz,
-									ela é
-									vista
-									pelo organismo como uma ameaça e é destruída.</li>
-							</ul>
-
-						</div>
-
-
-
-
-
-					</div>
-					<p>Quando essas células defeituosas e mutantes se reproduzem rapidamente, o sistema imunológico não
-						consegue acompanhar essa rapidez e essas 3 medidas de segurança do organismo do corpo falham e o
-						câncer se desenvolve. </p>
-					<button type="button" onclick="createScene()" class="gerar3d" id="botao"><p>Quer saber mais? <br> clique aqui</p></button>
-					<div class="content-box">
-						<div id="canvas-container" class="canvas-container">
-							<p>esse é o modelo da célula cancerígena:</p>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<div class="card" style="width: 100%; ">
-				<img src="../IMG/todo-tumor-e-cancer.jpg" class="card-img-top" alt="...">
-				<div class="card-body">
-					<h5 class="card-title">Card title</h5>
-					<p class="card-text">Some quick example text to build on the card title and make up the bulk of
-						the card's content.</p>
-					<button type="button" onclick="createScene2()" class="gerar3d" class="botao">Gerar Cena</button>
-					<div class="content-box2">
-						<div id="canvas-container2" class="canvas-container"></div>
-					</div>
-				</div>
-			</div>
-
-			<div class="card" style="width: 100%; ">
-				<img src="../IMG/todo-tumor-e-cancer.jpg" class="card-img-top" alt="...">
-				<div class="card-body">
-					<h5 class="card-title">Card title</h5>
-					<p class="card-text">Some quick example text to build on the card title and make up the bulk of
-						the card's content.</p>
-					<button type="button" onclick="createScene3()" class="gerar3d" class="botao">Gerar Cena</button>
-					<div class="content-box3">
-						<div id="canvas-container3" class="canvas-container"></div>
-					</div>
-				</div>
 			</div>
 
 		</div>
 	</div>
+	<div class="content-box">
+		<div id="canvas-container" class="canvas-container">
+		</div>
+	</div>
+	<div class="content-box2">
+		<div id="canvas-container2" class="canvas-container"></div>
+	</div>
+	<div class="content-box3">
+		<div id="canvas-container3" class="canvas-container"></div>
+	</div>
+	
+</div>
 
+
+
+
+
+
+
+	<div class="flex-container cubo">
+
+		<div class="container">
+
+			<div class="cancer">
+				<h5 class="card-title" style="font-size: 5vw;"> Como surge o câncer?</h5>
+				<button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#texto-celula"
+					aria-expanded="false" aria-controls="texto-celula">
+					clique aqui para descobrir
+				</button>
+
+				<div class="collapse" id="texto-celula">
+					<div class="card" style="width: 100%;">
+						<div class="card-body">
+
+							<p class="card-text" style="word-spacing: -1.3px;">O DNA é um enorme manual para o corpo
+								humano e é
+								ele quem determina o
+								comportamento de cada célula e quanto à sua multiplicação. A inicialização de um
+								possível câncer ocorre quando o DNA sofre mutações e começa a passar informações
+								erradas para a célula. As mutações ou alterações são comumente recorrentes, pois os
+								30.000 genes que o DNA precisa codificar no corpo inteiro são passíveis de alterações.
+								Por isso, o organismo possui formas diferentes de segurança, para que essas células,
+								com informações erradas, não se reproduzam. </p>
+
+
+
+							<p class="d-inline-flex gap-1">
+								<button class="btn btn-primary" type="button" data-bs-toggle="collapse"
+									data-bs-target="#collapseExample" aria-expanded="false"
+									aria-controls="collapseExample">
+									como o organismo se defende?
+								</button>
+							</p>
+							<div class="collapse" id="collapseExample">
+								<div class="card card-body">
+									<ul class="ul-topic">
+										<li class="li-topic">Cada célula possui moléculas que corrigem as mutações do
+											DNA. Elas
+											conseguem perceber quais células possuem mutação e passam a corrigi-las.
+										</li>
+
+										<li class="li-topic">Na maioria das vezes as mutações são inofensivas para o
+											nosso
+											organismo,
+											mas para evitar um acúmulo de mutações em regiões específicas as células se
+											autodestroem,
+											prevenindo que um possível câncer se desenvolva. Caso as células de
+											autodestruição
+											sejam
+											desligadas devido à alterações, o sistema de autodestruição nunca é ativado
+											e a
+											célula
+											defeituosa passa a ser imortal e a se multiplicar.
+										</li>
+
+										<li class="li-topic">É nesse último caso que o sistema imune é ativado. Ele é
+											capaz de
+											eliminar as
+											células defeituosas que podem gerar um câncer. Pois quando uma célula se
+											reproduz,
+											ela é
+											vista
+											pelo organismo como uma ameaça e é destruída.</li>
+									</ul>
+
+								</div>
+
+
+
+
+
+							</div>
+							<p>Quando essas células defeituosas e mutantes se reproduzem rapidamente, o sistema
+								imunológico não
+								consegue acompanhar essa rapidez e essas 3 medidas de segurança do organismo do corpo
+								falham e o
+								câncer se desenvolve. </p>
+
+						</div>
+					</div>
+				</div>
+
+
+
+
+
+
+
+
+
+			</div>
+
+			<div class="cancer">
+				<h5 class="card-title" style="font-size: 5vw;"> O que são os cromossomos?</h5>
+				<button class="btn btn-primary" type="button" data-bs-toggle="collapse"
+					data-bs-target="#texto-funcao-celular" aria-expanded="false" aria-controls="texto-funcao-celular">
+					clique aqui para descobrir
+				</button>
+
+				<div class="collapse" id="texto-funcao-celular">
+					<div class="card" style="width: 100%;">
+						<div class="card-body">
+
+							<p>Os cromossomos são estruturas presentes nas células dos seres eucarióticos e que
+								desempenham o papel de armazenar o material genético. Em outras palavras, os
+								cromossomos carregam as informações herdadas dos progenitores de forma condensada no
+								DNA.<br>
+								A quantidade de cromossomos varia entre as espécies. Os seres humanos, por exemplo,
+								possuem 46 divididos em 23 pares. Os pares numerados de 1 a 22 são chamados de
+								autossomos, responsáveis por toda a caracterização do indivíduo, exceto as sexuais
+								que têm o par 23 responsável por isto. Esse último par, também conhecido como par
+								alossômico, tem duas variações. Uma delas é XX que indica que o ser humano é do sexo
+								feminino e XY, do sexo masculino. Um ponto importante é que as células sexuais
+								possuem a metade do número de cromossomos, 23. Mas por quê? Isso ocorre pelo fato de
+								que durante a formação do zigoto, ocorre a fusão dos materiais genéticos do
+								espermatozoide e do ovócito. Logo, os 23 cromossomos de cada célula dão origem aos
+								46 do novo indivíduo. Vale ressaltar também que os cromossomos estão presentes em
+								todas as células do nosso corpo, com exceção das hemácias. <br><br> <br></p>
+
+
+							<button class="btn btn-primary" type="button" data-bs-toggle="collapse"
+								data-bs-target="#como-relacionam" aria-expanded="false" aria-controls="como-relacionam">
+								Como os cromossomos e os cânceres relacionam-se?
+							</button>
+							<div class="collapse" id="como-relacionam">
+								<div class="card card-body" style="margin-top: 2vw;">
+									Os cânceres originam-se a partir de mutações genéticas, ou seja, mudanças ou
+									alterações do DNA caracterizadas por um crescimento descontrolado das células no
+									organismo. Essas alterações podem ocorrer nas estruturas e nas quantidades
+									cromossômicas, acarretando translocações, deleções e amplificações.
+
+								</div>
+							</div>
+
+							<button class="btn btn-primary" type="button" data-bs-toggle="collapse"
+								data-bs-target="#prevencoes" aria-expanded="false" aria-controls="prevencoes"
+								style="margin-top: 2vw;">
+								Prevenções e tratamentos dos cânceres
+							</button>
+							<div class="collapse" id="prevencoes">
+								<div class="card card-body" style="margin-top: 2vw;">
+									As prevenções e tratamentos são de extrema importância contra uma doença que até os
+									dias atuais não possui cura. Apesar das prevenções não possuírem uma eficácia de
+									100%, elas desempenham papéis fundamentais para que um possível tratamento futuro
+									seja de bons prospectos. Os atos de prevenção estão intimamente relacionados a um
+									estilo de vida saudável baseado em uma boa alimentação, atos de vacinação e até
+									mesmo de proteção solar. Um diagnóstico precoce à respeito da origem de um câncer
+									por meio de exames também são importantes para um melhor tratamento, pois o número
+									de células com mutação será menor. <br> <br>
+									Com os avanços da Medicina e de outras ciências biomédicas, as formas de tratamento
+									estão aprimorando-se ao passar dos anos. A escolha do tipo de tratamento está
+									atrelado a qual estágio o câncer desenvolveu-se. Dentre os tratamentos de maior
+									eficiência, podemos citar os seguintes: <br><br>
+
+
+
+										<ul class="ul-topic">
+											<li class="li-topic">
+												Cirurgia: <br> A cirurgia tem o objetivo de retirar do organismo o tumor por completo.
+												A sua eficácia está relacionada na capacidade do cirurgião não deixar células
+												cancerígenas residuais. E alguns tipos de câncer os quais a cirurgia é escolhida
+												como forma de tratamento são o de próstata, mama e cólon.<br><br>
+											</li>
+	
+											<li class="li-topic">
+												Radioterapia: <br> A radioterapia consiste na utilização de radiações de alta energia
+												para danificar ou destruir as células cancerígenas e é caracterizada por ser
+												bastante eficaz contra proliferação das mutações.<br><br>
+											</li>
+	
+											<li class="li-topic">
+												Quimioterapia: <br> A quimioterapia é baseada no uso de medicamentos por vias orais ou
+												intravenosas. Esse tipo é recomendado para cânceres que se espalham para mais de uma
+												parte do corpo.<br><br>
+											</li>
+										</ul>
+
+
+
+
+								</div>
+							</div>
+
+
+
+						</div>
+					</div>
+				</div>
+
+
+
+
+
+
+
+
+
+
+			</div>
+
+			<div class="cancer">
+				<h5 class="card-title" style="font-size: 5vw;">Qual é a função do núcleo celular?</h5>
+				<button class="btn btn-primary" type="button" data-bs-toggle="collapse"
+					data-bs-target="#texto-cromossomos" aria-expanded="false" aria-controls="texto-cromossomos">
+					clique aqui para descobrir
+				</button>
+
+				<div class="collapse" id="texto-cromossomos">
+					<div class="card" style="width: 100%;">
+						<div class="card-body">
+
+							<p>Os cromossomos são estruturas presentes nas células dos seres eucarióticos e que
+								desempenham o papel de armazenar o material genético. Em outras palavras, os
+								cromossomos carregam as informações herdadas dos progenitores de forma condensada no
+								DNA.<br>
+								A quantidade de cromossomos varia entre as espécies. Os seres humanos, por exemplo,
+								possuem 46 divididos em 23 pares. Os pares numerados de 1 a 22 são chamados de
+								autossomos, responsáveis por toda a caracterização do indivíduo, exceto as sexuais
+								que têm o par 23 responsável por isto. Esse último par, também conhecido como par
+								alossômico, tem duas variações. Uma delas é XX que indica que o ser humano é do sexo
+								feminino e XY, do sexo masculino. Um ponto importante é que as células sexuais
+								possuem a metade do número de cromossomos, 23. Mas por quê? Isso ocorre pelo fato de
+								que durante a formação do zigoto, ocorre a fusão dos materiais genéticos do
+								espermatozoide e do ovócito. Logo, os 23 cromossomos de cada célula dão origem aos
+								46 do novo indivíduo. Vale ressaltar também que os cromossomos estão presentes em
+								todas as células do nosso corpo, com exceção das hemácias. </p>
+
+
+
+
+						</div>
+					</div>
+				</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			</div>
+
+
+
+
+
+
+
+
+		</div>
 	</div>
 
-	</div>
+
+
+
+
+
+
+
 
 
 	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"

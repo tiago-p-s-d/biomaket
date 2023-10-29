@@ -8,8 +8,8 @@ import { OrbitControls } from "https://cdn.skypack.dev/three@0.129.0/examples/js
 let scene = null;
 let camera = null;
 let renderer = null;
-let cube = null;
-let canvasContainer = null; // Mova a declaração para o escopo global
+
+let canvasContainer2 = null; // Mova a declaração para o escopo global
 let x = 0;
 
 scene = new THREE.Scene();
@@ -19,9 +19,9 @@ camera = new THREE.PerspectiveCamera(75, 1, 0.1, 1000);
 camera.position.z = 2;
 
 // Crie um renderizador e adicione-o ao DOM
-canvasContainer = document.getElementById('canvas-container'); // Defina a variável aqui
+canvasContainer2 = document.getElementById('canvas-container2'); // Defina a variável aqui
 renderer = new THREE.WebGLRenderer();
-canvasContainer.appendChild(renderer.domElement);
+canvasContainer2.appendChild(renderer.domElement);
 
 
 
@@ -40,7 +40,7 @@ scene.add(light)
 camera.position.set(0,20,60);
 camera.lookAt(new THREE.Vector3(0, 10, 0));
 
-let y = document.querySelector('.content-box');
+let y = document.querySelector('.content-box2');
 
 // Redimensione o modelo com base no tamanho do contêiner
 resizeModel();
@@ -51,17 +51,22 @@ window.addEventListener('resize', resizeModel);
 const controls = new OrbitControls(camera, renderer.domElement);
 controls.update();
 
+let contentbox = document.querySelector('.content-box');
+let contentbox3 = document.querySelector('.content-box3');
+
+
 // Inicie a animação
 animate();
 y.style.display = 'none';
 
- window.createScene = function () {
+ window.createScene2 = function () {
     // Crie uma cena Three.js
 
-    if (x == 0) {
+    if (x == 0 && contentbox.style.display == 'none' && contentbox3.style.display == 'none') {
         showCanvas()
         x++;
     } else {
+        window.alert('visualize apenas um de cada vez!')
         hideCanvas();
         x = 0;
     }
@@ -78,8 +83,8 @@ function showCanvas() {
 }
 
 function resizeModel() {
-    const containerWidth = canvasContainer.clientWidth;
-    const containerHeight = canvasContainer.clientHeight;
+    const containerWidth = canvasContainer2.clientWidth;
+    const containerHeight = canvasContainer2.clientHeight;
 
     renderer.setSize(containerWidth, containerHeight);
     camera.aspect = containerWidth / containerHeight;
