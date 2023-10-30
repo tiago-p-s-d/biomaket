@@ -54,21 +54,35 @@ controls.update();
 
 let contentbox2 = document.querySelector('.content-box2');
 let contentbox3 = document.querySelector('.content-box3');
+let verdade = false;
+
+
 
 animate();
 y.style.display = 'none';
 
  window.createScene = function () {
+
+    if (contentbox2.style.display != 'none' || contentbox3.style.display != 'none'){
+        verdade = false;
+    
+    }else{
+        verdade = true;
+    }
     // Crie uma cena Three.js
 
-    if (x == 0 && contentbox2.style.display == 'none' && contentbox3.style.display == 'none') {
+    if (x == 0 && verdade == true) {
         showCanvas()
         x++;
-    } else {
-        window.alert('visualize apenas um de cada vez!')
+    } 
+    else if(x == 0 && verdade == false){
+        window.alert('um de cada vez!')
+    }else {
+        
         hideCanvas();
         x = 0;
     }
+
 
 }
 

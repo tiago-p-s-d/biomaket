@@ -55,20 +55,30 @@ controls.update();
 
 let contentbox = document.querySelector('.content-box');
 let contentbox3 = document.querySelector('.content-box2');
-
+let verdade = false;
 
 // Inicie a animação
 animate();
 y.style.display = 'none';
 
  window.createScene3 = function () {
+
+    if (contentbox.style.display != 'none' || contentbox3.style.display != 'none'){
+        verdade = false;
+    
+    }else{
+        verdade = true;
+    }
     // Crie uma cena Three.js
 
-    if (x == 0 && contentbox.style.display == 'none' && contentbox3.style.display == 'none') {
+    if (x == 0 && verdade == true) {
         showCanvas()
         x++;
-    } else {
-        window.alert('visualize apenas um de cada vez!')
+    } 
+    else if(x == 0 && verdade == false){
+        window.alert('um de cada vez!')
+    }else {
+        
         hideCanvas();
         x = 0;
     }

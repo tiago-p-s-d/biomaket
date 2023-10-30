@@ -29,6 +29,38 @@
 
 	<h1 class="texto">TEXTOS</h1>
 	<div class="flex-container cubo">
+
+		<div id="carouselExample" class="carousel slide">
+			<div class="carousel-inner">
+			  <div class="carousel-item active">
+				<img src="../IMG/biomaket.jpeg" class="d-block w-100" alt="...">
+			  </div>
+			  <div class="carousel-item">
+				<img src="../IMG/todo-tumor-e-cancer.jpg" class="d-block w-100" alt="...">
+			  </div>
+			  <div class="carousel-item">
+				<img src="../IMG/logoif.png" class="d-block w-100" alt="...">
+			  </div>
+			</div>
+			<button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+			  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+			  <span class="visually-hidden">Anterior</span>
+			</button>
+			<button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+			  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+			  <span class="visually-hidden">Proximo</span>
+			</button>
+		  </div>
+
+
+
+
+
+
+
+
+
+
 		<h5 style="font-size: 10vw;">BIOMAKET</h5>
 		<img src="../IMG/biomaket.jpeg" alt="biomaket" style="width: 80%;">
 		<h1>Trabalho realizado por: <br> Rickson, Clara, Luiz e Tiago</h1>
@@ -58,36 +90,36 @@
 
 
 				<h2>para ver os modelos 3d, clique nos botões a seguir</h2>
-<div style="display: flex; justify-content: space-between;">
-				<button type="button" onclick="createScene()" class="gerar3d" id="botao">
-					<p>celula</p>
-				</button>
-				
+				<div style="display: flex; justify-content: space-between;">
+					<button type="button" onclick="createScene()" class="gerar3d" id="botao">
+						<p>celula</p>
+					</button>
 
 
-				<button type="button" onclick="createScene2()" class="gerar3d" class="botao">cromossomo</button>
+
+					<button type="button" onclick="createScene2()" class="gerar3d" class="botao">cromossomo</button>
 
 
-				<button type="button" onclick="createScene3()" class="gerar3d" class="botao">fita de dna</button>
+					<button type="button" onclick="createScene3()" class="gerar3d" class="botao">fita de dna</button>
 
 
+
+				</div>
 
 			</div>
+		</div>
+		<div class="content-box">
+			<div id="canvas-container" class="canvas-container">
+			</div>
+		</div>
+		<div class="content-box2">
+			<div id="canvas-container2" class="canvas-container"></div>
+		</div>
+		<div class="content-box3">
+			<div id="canvas-container3" class="canvas-container"></div>
+		</div>
 
-		</div>
 	</div>
-	<div class="content-box">
-		<div id="canvas-container" class="canvas-container">
-		</div>
-	</div>
-	<div class="content-box2">
-		<div id="canvas-container2" class="canvas-container"></div>
-	</div>
-	<div class="content-box3">
-		<div id="canvas-container3" class="canvas-container"></div>
-	</div>
-	
-</div>
 
 
 
@@ -252,26 +284,32 @@
 
 
 
-										<ul class="ul-topic">
-											<li class="li-topic">
-												Cirurgia: <br> A cirurgia tem o objetivo de retirar do organismo o tumor por completo.
-												A sua eficácia está relacionada na capacidade do cirurgião não deixar células
-												cancerígenas residuais. E alguns tipos de câncer os quais a cirurgia é escolhida
-												como forma de tratamento são o de próstata, mama e cólon.<br><br>
-											</li>
-	
-											<li class="li-topic">
-												Radioterapia: <br> A radioterapia consiste na utilização de radiações de alta energia
-												para danificar ou destruir as células cancerígenas e é caracterizada por ser
-												bastante eficaz contra proliferação das mutações.<br><br>
-											</li>
-	
-											<li class="li-topic">
-												Quimioterapia: <br> A quimioterapia é baseada no uso de medicamentos por vias orais ou
-												intravenosas. Esse tipo é recomendado para cânceres que se espalham para mais de uma
-												parte do corpo.<br><br>
-											</li>
-										</ul>
+									<ul class="ul-topic">
+										<li class="li-topic">
+											Cirurgia: <br> A cirurgia tem o objetivo de retirar do organismo o tumor por
+											completo.
+											A sua eficácia está relacionada na capacidade do cirurgião não deixar
+											células
+											cancerígenas residuais. E alguns tipos de câncer os quais a cirurgia é
+											escolhida
+											como forma de tratamento são o de próstata, mama e cólon.<br><br>
+										</li>
+
+										<li class="li-topic">
+											Radioterapia: <br> A radioterapia consiste na utilização de radiações de
+											alta energia
+											para danificar ou destruir as células cancerígenas e é caracterizada por ser
+											bastante eficaz contra proliferação das mutações.<br><br>
+										</li>
+
+										<li class="li-topic">
+											Quimioterapia: <br> A quimioterapia é baseada no uso de medicamentos por
+											vias orais ou
+											intravenosas. Esse tipo é recomendado para cânceres que se espalham para
+											mais de uma
+											parte do corpo.<br><br>
+										</li>
+									</ul>
 
 
 
@@ -307,21 +345,26 @@
 					<div class="card" style="width: 100%;">
 						<div class="card-body">
 
-							<p>Os cromossomos são estruturas presentes nas células dos seres eucarióticos e que
-								desempenham o papel de armazenar o material genético. Em outras palavras, os
-								cromossomos carregam as informações herdadas dos progenitores de forma condensada no
-								DNA.<br>
-								A quantidade de cromossomos varia entre as espécies. Os seres humanos, por exemplo,
-								possuem 46 divididos em 23 pares. Os pares numerados de 1 a 22 são chamados de
-								autossomos, responsáveis por toda a caracterização do indivíduo, exceto as sexuais
-								que têm o par 23 responsável por isto. Esse último par, também conhecido como par
-								alossômico, tem duas variações. Uma delas é XX que indica que o ser humano é do sexo
-								feminino e XY, do sexo masculino. Um ponto importante é que as células sexuais
-								possuem a metade do número de cromossomos, 23. Mas por quê? Isso ocorre pelo fato de
-								que durante a formação do zigoto, ocorre a fusão dos materiais genéticos do
-								espermatozoide e do ovócito. Logo, os 23 cromossomos de cada célula dão origem aos
-								46 do novo indivíduo. Vale ressaltar também que os cromossomos estão presentes em
-								todas as células do nosso corpo, com exceção das hemácias. </p>
+							<p>O núcleo celular é o centro de controle da célula, onde o DNA é armazenado. Sua função é
+								regular a atividade celular, controlar a expressão dos genes e coordenar a síntese de
+								proteínas.
+								<br>
+
+								Na mitose, o núcleo desempenha um papel fundamental, pois durante esse processo, o
+								material genético é copiado e distribuído de maneira precisa para as células filhas,
+								garantindo a replicação exata da informação genética.
+								<br>
+
+								Na reprodução celular, o núcleo também é essencial, pois assegura que as células filhas
+								recebam uma cópia adequada do material genético da célula-mãe
+
+								<br>
+								No contexto do câncer, mutações genéticas que ocorrem no núcleo podem perturbar a
+								regulação do ciclo celular, levando à divisão celular descontrolada. Essas mutações
+								podem causar o desenvolvimento de células cancerosas que se multiplicam sem controle,
+								formando tumores. Portanto, problemas no núcleo, como mutações genéticas, desempenham um
+								papel importante na formação do câncer.
+							</p>
 
 
 
@@ -353,9 +396,15 @@
 
 
 
+
 		</div>
 	</div>
-
+	<div class="flex-container cubo">
+		<iframe   style="width: 100%; height: auto;" src="https://www.youtube.com/embed/mRDklX7rjmg?si=XPBtd5PvBECnHKs4"
+			title="YouTube video player" frameborder="0"
+			allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+			allowfullscreen></iframe>
+	</div>
 
 
 
