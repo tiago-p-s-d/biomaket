@@ -30,15 +30,15 @@ canvasContainer3.appendChild(renderer.domElement);
 const loader = new OBJLoader();
 
 var obj;
-loader.load('../models/Doguinho.obj', function (object){
+loader.load('../models/DNA.obj', function (object){
 scene.add(object);
 obj = object;
 })
 
 const light = new THREE.HemisphereLight(0xffffff, 0x080820, 1);
 scene.add(light)
-camera.position.set(10,20,0);
-camera.lookAt(new THREE.Vector3(0, 10, 0));
+camera.position.set(50,750,0);
+camera.lookAt(new THREE.Vector3(5, 10, 5));
 
 let y = document.querySelector('.content-box3');
 

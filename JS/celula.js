@@ -29,7 +29,7 @@ canvasContainer.appendChild(renderer.domElement);
 const loader = new OBJLoader();
 
 var obj;
-loader.load('../models/cat.obj', function (object){
+loader.load('../models/cell.obj', function (object){
 scene.add(object);
 obj = object;
 })
@@ -57,6 +57,8 @@ let contentbox3 = document.querySelector('.content-box3');
 let verdade = false;
 
 
+let size = document.querySelector('.newsize');
+
 
 animate();
 y.style.display = 'none';
@@ -65,6 +67,7 @@ y.style.display = 'none';
 
     if (contentbox2.style.display != 'none' || contentbox3.style.display != 'none'){
         verdade = false;
+        
     
     }else{
         verdade = true;
@@ -72,7 +75,8 @@ y.style.display = 'none';
     // Crie uma cena Three.js
 
     if (x == 0 && verdade == true) {
-        showCanvas()
+
+        showCanvas();
         x++;
     } 
     else if(x == 0 && verdade == false){
